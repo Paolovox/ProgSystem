@@ -1,0 +1,8 @@
+Socket Win vs Unix
+
+
+1- La Winsocket va inizializzata con WSAStartup, mentre in Unix ciò non avviene;
+2- Gli header e le librerie da includere sono diversi. Win: (winsock2.h, ws2_32.dll) Unix: (socket.h , apra/inet.h , unistd.h)
+3- Winsocket chiudono la socket con closesocket, Unix close. Win rilascia le risorse con WSACleanup.
+4- Winsocket preleva l'errore dalla funzione WSAGetLastError, Unix errno.
+5- ...
